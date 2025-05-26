@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITFormer: Bridging Time Series and Language</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f9fafc;
+      color: #2c3e50;
+    }
+    header {
+      background: linear-gradient(90deg, #3498db, #2ecc71);
+      color: white;
+      padding: 2em 1em;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    nav {
+      text-align: center;
+      background-color: #fff;
+      padding: 1em 0;
+      border-bottom: 1px solid #eee;
+    }
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #3498db;
+      font-weight: 600;
+      transition: color 0.2s ease-in-out;
+    }
+    nav a:hover {
+      color: #2ecc71;
+    }
+    main {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1.5em;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    section {
+      margin-bottom: 2.5em;
+    }
+    h2 {
+      border-left: 4px solid #3498db;
+      padding-left: 0.5em;
+      color: #2c3e50;
+    }
+    ul {
+      padding-left: 1.5em;
+    }
+    pre {
+      background: #f0f4f8;
+      padding: 1em;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+    a {
+      color: #3498db;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      margin: 3em 0 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ITFormer: Bridging Time Series Signal and Natural Language for Multi-Modal QA</h1>
+  </header>
+
+  <nav>
+    <a href="#abstract">Abstract</a>
+    <a href="#dataset">Dataset</a>
+    <a href="#model">Model</a>
+    <a href="#results">Results</a>
+    <a href="#code">Code & Citation</a>
+  </nav>
+
+  <main>
+    <section id="abstract">
+      <h2>Abstract</h2>
+      <p>
+        <strong>ITFormer</strong> is a novel framework that bridges time-series signals and large language models for multi-modal question answering. Our benchmark,
+        <em>EngineMT-QA</em>, is the first large-scale dataset to evaluate such interactions. The framework introduces <strong>Time Token Position Encoding (TPE)</strong>,
+        <strong>Learnable Instruct Tokens (LIT)</strong>, <strong>Instruct Time Attention (ITA)</strong>, and <strong>Time Token as Language (TAL)</strong> to unify temporal and textual features
+        effectively with minimal overhead.
+      </p>
+    </section>
+
+    <section id="dataset">
+      <h2>EngineMT-QA Dataset</h2>
+      <p>
+        A comprehensive multi-task QA dataset based on real-world aero-engine sensor data. EngineMT-QA contains 110k+ QA pairs across four task types: understanding,
+        perception, reasoning, and decision-making, constructed from 32-channel flight data using the N-CMAPSS dataset.
+      </p>
+      <p><a href="https://anonymous.4open.science/r/ITFormer-0BD3" target="_blank">[Access the Dataset]</a></p>
+    </section>
+
+    <section id="model">
+      <h2>ITFormer Architecture</h2>
+      <p>Key components of ITFormer:</p>
+      <ul>
+        <li><strong>TPE:</strong> Temporal + channel + segment positional encoding</li>
+        <li><strong>LIT:</strong> Instructional tokens guiding semantic alignment</li>
+        <li><strong>ITA:</strong> Temporal-textual cross-modal attention mechanism</li>
+        <li><strong>TAL:</strong> Projects time tokens as natural language inputs for LLMs</li>
+      </ul>
+    </section>
+
+    <section id="results">
+      <h2>Results</h2>
+      <p>
+        ITFormer achieves <strong>state-of-the-art performance</strong> on the EngineMT-QA benchmark. With less than 1% additional trainable parameters, its accuracy and robustness
+        scale well with model size, outperforming both vision-text and time-series baselines.
+      </p>
+    </section>
+
+    <section id="code">
+      <h2>Code & Citation</h2>
+      <p><a href="https://anonymous.4open.science/r/ITFormer-0BD3" target="_blank">GitHub Repository (Anonymous)</a></p>
+      <pre><code>@article{wang2025itformer,
+  title={ITFormer: Bridging Time Series Signal and Natural Language for Multi-Modal QA},
+  author={Wang, Yilin et al.},
+  journal={ICML},
+  year={2025}
+}</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 ITFormer Project. All rights reserved.
+  </footer>
+</body>
+</html>
