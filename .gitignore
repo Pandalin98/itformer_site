@@ -62,3 +62,4 @@ streamlit_qa_timeseries.py
 resources/
 *.docx
 *.md
+.py
